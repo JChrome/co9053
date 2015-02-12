@@ -1,27 +1,34 @@
-var Calculator = {
-    foo: "bar", 
-    add: function(a,b){
-        return a+b;
-    },
-    subtract: function(a,b){
-        return a-b;
-    }
+var FizzBuzz = {
+  generate: function(count,suckit){
+      var results = [];
+      for (var i=1; i <= count; i++){
+        if(i % 15 == 0)
+            results.push("FizzBuzz");
+        if(i % 5 == 0)
+            results.push("Buzz");
+        if(i % 3 == 0)
+            results.push("Fizz")
+        else
+            results.push(i);
+      };
+      return results;
+  }  
+    
 };
 
-describe("Calculator", function(){
-    it("Calculator is defined", function(){
-       expect(Calculator).toBeDefined(); 
-        
-    });
-    describe("addition", function(){
-        it("can add 1 and 1", function(){
-            expect(Calculator.add(1,1)).toEqual(2);     
-        });
+describe("Fizzbuzz", function(){
+    it("exists", function(){
+        expect(FizzBuzz).toBeDefined();
     });
     
-    it("2+2=4", function(){
-        expect(1).toEqual(1);
+    describe("generate", function(){
+        it("exists", function(){
+           expect(FizzBuzz.generate).toBeDefined(); 
+        });
+        
+        it("generate(3) returns", function(){
+           expect(FizzBuzz.generate(3)).toEqual([1,2,"Fizz"]);
+            
+        });
     });
-
-});
-
+})

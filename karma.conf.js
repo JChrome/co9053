@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Feb 12 2015 00:10:07 GMT+0000 (UTC)
+// Generated on Thu Feb 12 2015 01:20:33 GMT+0000 (UTC)
 
 module.exports = function(config) {
   config.set({
@@ -15,8 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*spec.js',
-      "app/*.js"
+      'test/**/*spec.js'
     ],
 
 
@@ -34,7 +33,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['story'],
 
 
     // web server port
@@ -62,6 +61,5 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-    
   });
 };
